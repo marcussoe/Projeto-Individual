@@ -1,0 +1,328 @@
+.cla_perso2 {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+}
+
+
+.cla_perso2 video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    filter: brightness(0.7);
+}
+
+
+
+/* 
+.cla_perso2{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+
+
+.video3 {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: fit-content;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    filter: brightness(0.7);
+} */
+
+
+
+/* .cla_perso2 video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+}
+
+.classe2{
+    width: 100%;
+    height: 100vh;
+} */
+
+.ini{
+    position: relative;
+    z-index: 3;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12%;
+    margin-left: 105px;
+    font-size: 60px;
+    font-family: 'Valorant';
+    color: white;
+}
+
+.img-iniciador{
+    position: relative;
+    z-index: 3;
+    width: 52%;
+    height: 28vh;
+    margin-left: 37%;
+    margin-top: 80px;
+}
+
+.text2{
+    position: absolute;
+    width: 36%;
+    letter-spacing: 0px;
+    line-height: 30px;
+    font-weight: 500;
+    height: 40vh;
+    font-size: 24px;
+    z-index: 3;
+    margin-top: 40px;
+    margin-left: 104px;
+    color: white;
+    font-family: 'RopaSans';
+}
+
+.persosova{
+    position: relative;
+    z-index: 3;
+    width: 80%;
+    height: 60vh;
+    margin-left: 25%;
+}
+
+.sova {
+    position: relative;
+    font-size: 60px;
+    font-family: 'Valorant';
+    color: white;
+    left: 36%;
+    margin-top: 49px;
+}
+
+
+.habilidade1-sova {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 157px;
+}
+
+.nomesova {
+    position: absolute;
+    width: 48%;
+    letter-spacing: 1px;
+    line-height: 33px;
+    font-weight: 500;
+    height: 6vh;
+    font-size: 21px;
+    z-index: 3;
+    margin-top: 30px;
+    margin-left: -9%;
+    color: white;
+    font-family: 'RopaSans'
+}
+
+.contextosova{
+    position: absolute;
+    width: 74%;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-weight: 500;
+    height: 6vh;
+    font-size: 17px;
+    z-index: 3;
+    margin-top: 61px;
+    margin-left: -9%;
+    color: white;
+    font-family: 'RopaSans';
+    display: none;
+}
+
+.img-shockbolt{
+    position: relative;
+    z-index: 3;
+    width: 15%;
+    height: 9vh;
+    margin-left: -31%;
+    margin-top: 19px;
+}
+
+.img-shockbolt:hover + .contextosova{
+    display: block;
+}
+
+
+.habilidade2-sova {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 157px;
+    margin-top: 56px;
+}
+
+.nome2sova {
+    position: absolute;
+    width: 48%;
+    letter-spacing: 1px;
+    line-height: 33px;
+    font-weight: 500;
+    height: 6vh;
+    font-size: 21px;
+    z-index: 3;
+    margin-top: 30px;
+    margin-left: -9%;
+    color: white;
+    font-family: 'RopaSans'
+}
+
+.contexto2sova{
+    position: absolute;
+    width: 68%;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-weight: 500;
+    height: 6vh;
+    font-size: 17px;
+    z-index: 3;
+    margin-top: 61px;
+    margin-left: -9%;
+    color: white;
+    font-family: 'RopaSans';
+    display: none;
+}
+
+.img-shockbolt2{
+    position: relative;
+    z-index: 3;
+    width: 14%;
+    height: 8vh;
+    margin-left: -31%;
+    margin-top: 29px;
+}
+
+.img-shockbolt2:hover + .contexto2sova{
+    display: block;
+}
+
+.habilidade3-sova {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 157px;
+    margin-top: 76px;
+}
+
+
+.nome3sova {
+    position: absolute;
+    width: 48%;
+    letter-spacing: 1px;
+    line-height: 33px;
+    font-weight: 500;
+    height: 6vh;
+    font-size: 21px;
+    z-index: 3;
+    margin-top: 30px;
+    margin-left: -9%;
+    color: white;
+    font-family: 'RopaSans'
+}
+
+.contexto3sova{
+    position: absolute;
+    width: 68%;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-weight: 500;
+    height: 6vh;
+    font-size: 17px;
+    z-index: 3;
+    margin-top: 61px;
+    margin-left: -9%;
+    color: white;
+    font-family: 'RopaSans';
+    display: none;
+}
+
+.img-shockbolt3{
+    position: relative;
+    z-index: 3;
+    width: 15%;
+    height: 9vh;
+    margin-left: -31%;
+    margin-top: 19px;
+}
+
+.img-shockbolt3:hover + .contexto3sova{
+    display: block;
+}
+
+.habilidade4-sova {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 157px;
+    margin-top: 70px;
+}
+
+.nome4sova {
+    position: absolute;
+    width: 48%;
+    letter-spacing: 1px;
+    line-height: 33px;
+    font-weight: 500;
+    height: 6vh;
+    font-size: 21px;
+    z-index: 3;
+    margin-top: 30px;
+    margin-left: -50px;
+    color: white;
+    font-family: 'RopaSans'
+}
+
+.contexto4sova{
+    position: absolute;
+    width: 59%;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-weight: 500;
+    height: 6vh;
+    font-size: 17px;
+    z-index: 3;
+    margin-top: 61px;
+    margin-left: -9%;
+    color: white;
+    font-family: 'RopaSans';
+    display: none;
+}
+
+.img-shockbolt4{
+    position: relative;
+    z-index: 3;
+    width: 17%;
+    height: 9vh;
+    margin-left: -31%;
+    margin-top: 36px;
+}
+
+.img-shockbolt4:hover + .contexto4sova{
+    display: block;
+}
+
+
+.main3 {
+    width: 100%;
+    height: 20vh;
+    background: rgb(31, 43, 74);
+    background: linear-gradient(180deg, rgba(31, 43, 74, 1) 5%, rgba(31, 43, 74, 1) 12%, rgba(30, 42, 72, 1) 23%, rgba(20, 30, 38, 1) 60%);
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

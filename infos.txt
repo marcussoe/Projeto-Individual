@@ -1,0 +1,5 @@
+-- cor da nav = #0c1c24;
+-- cor da borda = #f84454;
+-- link da fonte: https://fontmeme.com/fontes/fonte-valorant/
+-- link da fonte: https://fonts.google.com/specimen/Ropa+Sans?query=Sans
+-- nome de fontes: Tungsten, DIN Next, FF Mark, Proxima Nova, and Arial, helvetica.

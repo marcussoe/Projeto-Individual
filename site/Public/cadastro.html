@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+    <script src="./js/funcoes.js"></script>
+</head>
+
+<body>
+
+
+    <header>
+        <nav class="nav-container">
+
+            <img class="logo-img" src="img/img-logo.png" alt="">
+
+            <ul class="nav-list">
+
+                <li>
+                    <a href="index.html">Inicio
+                        <div class="barra"></div>
+                    </a>
+                </li>
+
+
+                <!-- <li>
+                    <a href="#">Ranking</a>
+                    <div class="barra"></div>
+                </li> -->
+
+
+                <li>
+                    <a href="index.html#classesPersonagens ">Classes
+                        <a style="color: white;">
+                            |
+                        </a>
+                        <a href="index.html#classesPersonagens">Personagens
+                            <div class="barra"></div>
+                        </a>
+                        <div class="barra"></div>
+                    </a>
+
+
+                </li>
+
+
+                <li>
+                    <a href="index.html#interagir">Interagir
+                        <div class="barra"></div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#sobremim">Sobre mim
+                        <div class="barra"></div>
+                    </a>
+                </li>
+
+                <li style="color: white;">
+                    |
+                </li>
+
+                <li>
+                    <a href="login.html">Login
+                        <div class="barra"></div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cadastro.html">Cadastre-se
+                        <div class="barra"></div>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <main class="cadastro">
+            <div class="div-img-cadastro">
+                <img class="img-cadastro" src="img/img-site/img-cadastro.png" alt="">
+
+
+
+                <div class="container-cadastro">
+                    <img class="logo-cadastro" src="img/img-site/logo-vermelha-login.png" alt="">
+
+                    <!-- <h1 class="titulo-cadastro">Cadastre-se</h1> -->
+
+
+                    <div class="container-ipts">
+
+                        <div class="div-email">
+                            <span class="nome">Username:</span>
+                            
+
+                             
+                            <span class="email">Email:</span>
+                            
+                        </div>
+
+                        <input class="ipt-nome" type="text" placeholder="NomeUsuario" id="nome_input">
+                        <input class="ipt-email" type="text" placeholder="email@email.com" id="email_input"> 
+
+
+                         <div class="div-senha">
+
+                            <span class="senha">Senha:</span>
+
+                        </div>
+
+
+                        <input class="ipt-senha" type="password" placeholder="******" id="senha_input">
+                        <span class="confirmar-senha">Confirmar Senha:</span>
+                        <input class="ipt_confirmar-senha" type="password" placeholder="******" id="confirmacao_senha_input">
+
+
+                        <span class="titulo-box">Qual classe você gostou mais?</span>
+
+                        <select class="combo-box" name="" id="combo_classe" aria-placeholder="a">
+                            <option value="">--Selecione</option>
+                            <option value="1">Duelista</option>
+                            <option value="2">Iniciador</option>
+                            <option value="3">Controlador</option>
+                            <option value="4">Sentinela</option>
+                           
+
+                        </select>
+                        
+                        <a onclick="cadastrar()" class="btn-entrar">Cadastrar</a>
+
+
+                    </div>
+
+                </div>
+
+
+
+
+        </main>
+
+
+
+    </header>
+
+</body>
+
+</html>
+<script>
+
+function cadastrar() {
+        // aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = nome_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+        var combo_classeVar = combo_classe.value;
+
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || combo_classeVar == "") {
+            // cardErro.style.display = "block"
+            // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+
+            finalizarAguardar();
+            return false;
+        }
+        // else {
+        //     setInterval(sumirMensagem, 5000)
+        // }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+                combo_classeServer: combo_classeVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                // cardErro.style.display = "block";
+
+                // mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+    }
+
+    // function sumirMensagem() {
+    //     cardErro.style.display = "none"
+    // }
+
+
+
+</script>

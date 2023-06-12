@@ -1,0 +1,332 @@
+.cla_perso4 {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+}
+
+
+.cla_perso4 video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    filter: brightness(0.7);
+}
+
+/* .cla_perso4 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+
+.cla_perso4 video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+}
+ */
+
+
+/* 
+ .cla_perso4 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    margin-top: 80px;
+}
+
+
+.video5 {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: fit-content;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    filter: brightness(0.7); 
+}*/
+
+
+
+
+.titulo {
+    font-family: 'Valorant';
+    font-size: 50px;
+    color: white;
+    margin-top: 5px;
+}
+
+.senti {
+    position: relative;
+    z-index: 3;
+    max-width: 100%;
+    margin-top: 15%;
+    margin-left: 25%;
+    font-size: 60px;
+    font-family: 'Valorant';
+    color: white;
+}
+
+.classe4 {
+    margin-top: -91px;
+}
+
+.text4 {
+    position: absolute;
+    width: 37%;
+    letter-spacing: 0px;
+    line-height: 30px;
+    font-weight: 500;
+    height: 40vh;
+    font-size: 24px;
+    z-index: 3;
+    margin-top: 49px;
+    margin-left: 84px;
+    color: white;
+    font-family: 'RopaSans';
+}
+
+.img-sentinela {
+    position: relative;
+    z-index: 3;
+    width: 66%;
+    height: 26vh;
+    margin-left: 41%;
+    margin-top: 150px;
+}
+
+.persokill {
+    position: relative;
+    z-index: 3;
+    width: 80%;
+    height: 60vh;
+}
+
+.kill {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    margin-top: 55px;
+    margin-left: 59%;
+    font-size: 60px;
+    font-family: 'Valorant';
+    color: white;
+}
+
+.habilidade1-joy {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 157px;
+}
+
+.nome-joy {
+    position: absolute;
+    width: 48%;
+    letter-spacing: 1px;
+    line-height: 33px;
+    font-weight: 500;
+    height: 6vh;
+    font-size: 21px;
+    z-index: 3;
+    margin-top: 16px;
+    margin-left: 37%;
+    color: white;
+    font-family: 'RopaSans';
+}
+
+.contexto-joy {
+    position: absolute;
+    width: 39%;
+    line-height: 20px;
+    font-weight: 500;
+    height: 6vh;
+    font-size: 17px;
+    z-index: 3;
+    margin-top: 48px;
+    margin-left: 37%;
+    color: white;
+    font-family: 'RopaSans';
+    display: none; 
+}
+.img-granada{
+    position: relative;
+    z-index: 3;
+    width: 7%;
+    height: 10vh;
+    margin-left: 35%;
+    margin-top: 20px;
+}
+
+.img-granada:hover + .contexto-joy{
+    display: block;
+}
+
+
+
+.habilidade2-joy {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 157px;
+    margin-top: 62px;
+}
+
+
+.nome2-joy{
+    position: absolute;
+    width: 48%;
+    letter-spacing: 1px;
+    line-height: 33px;
+    font-weight: 500;
+    height: 6vh;
+    font-size: 21px;
+    z-index: 3;
+    margin-top: 16px;
+    margin-left: 37%;
+    color: white;
+    font-family: 'RopaSans';
+}
+
+.contexto2-joy{
+    position: absolute;
+    width: 40%;
+    line-height: 20px;
+    font-weight: 500;
+    height: 6vh;
+    font-size: 17px;
+    z-index: 3;
+    margin-top: 48px;
+    margin-left: 37%;
+    color: white;
+    font-family: 'RopaSans';
+    display: none; 
+}
+
+.img-granada2-joy{
+    position: relative;
+    z-index: 3;
+    width: 7%;
+    height: 10vh;
+    margin-left: 35%;
+    margin-top: 9px;
+}
+
+.img-granada2-joy:hover + .contexto2-joy{
+    display: block;
+}
+
+.habilidade3-joy {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 157px;
+    margin-top: 65px;
+}
+
+.nome3-joy{
+    position: absolute;
+    width: 48%;
+    letter-spacing: 1px;
+    line-height: 33px;
+    font-weight: 500;
+    height: 6vh;
+    font-size: 21px;
+    z-index: 3;
+    margin-top: 16px;
+    margin-left: 37%;
+    color: white;
+    font-family: 'RopaSans';
+}
+
+.contexto3-joy {
+    position: absolute;
+    width: 40%;
+    line-height: 20px;
+    font-weight: 500;
+    height: 6vh;
+    font-size: 17px;
+    z-index: 3;
+    margin-top: 48px;
+    margin-left: 37%;
+    color: white;
+    font-family: 'RopaSans';
+    display: none; 
+}
+
+.img-granada3-joy{
+    position: relative;
+    z-index: 3;
+    width: 7%;
+    height: 10vh;
+    margin-left: 35%;
+    margin-top: 21px;
+}
+
+.img-granada3-joy:hover + .contexto3-joy{
+    display: block;
+}
+
+
+.habilidade4-joy{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 157px;
+    margin-top: 51px;
+}
+
+
+.nome4-joy{
+    position: absolute;
+    width: 48%;
+    letter-spacing: 1px;
+    line-height: 33px;
+    font-weight: 500;
+    height: 6vh;
+    font-size: 21px;
+    z-index: 3;
+    margin-top: 16px;
+    margin-left: 38%;
+    color: white;
+    font-family: 'RopaSans';
+}
+
+.contexto4-joy{
+    position: absolute;
+    width: 40%;
+    line-height: 20px;
+    font-weight: 500;
+    height: 6vh;
+    font-size: 17px;
+    z-index: 3;
+    margin-top: 48px;
+    margin-left: 38%;
+    color: white;
+    font-family: 'RopaSans';
+    display: none; 
+}
+
+
+.img-granada4-joy{
+    position: relative;
+    z-index: 3;
+    width: 7%;
+    height: 10vh;
+    margin-left: 36%;
+    margin-top: 10px;
+}
+
+.img-granada4-joy:hover + .contexto4-joy{
+    display: block;
+}
+
+

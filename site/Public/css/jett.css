@@ -1,0 +1,349 @@
+@font-face {
+    font-family: RopaSans;
+    src: url(/fonts/RopaSans-Regular.ttf)
+}
+
+@font-face {
+    font-family: Valorant;
+    src: url(/fonts/Valorant\ Font.ttf)
+}
+
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+.cla_perso {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    aspect-ratio: 16 / 9;
+    height: fit-content;
+}
+
+
+.cla_perso video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    filter: brightness(0.7);
+}
+
+
+
+/* .video2 {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: fit-content;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    filter: brightness(0.7);
+} */ 
+
+
+.titulo {
+    font-family: 'Valorant';
+    font-size: 50px;
+    color: white;
+    margin-top: 5px;
+}
+
+.dudu {
+    position: relative;
+    z-index: 3;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 16%;
+    margin-left: 39%;
+    font-size: 60px;
+    font-family: 'Valorant';
+    color: white;
+}
+
+.classe {
+    margin-top: -91px;
+}
+
+
+.text {
+    position: absolute;
+    width: 38%;
+    letter-spacing: 0px;
+    line-height: 30px;
+    font-weight: 500;
+    height: 40vh;
+    font-size: 24px;
+    z-index: 3;
+    margin-top: 44px;
+    margin-left: 108px;
+    color: white;
+    font-family: 'RopaSans';
+}
+
+.img-duelista {
+    position: relative;
+    z-index: 3;
+    width: 73%;
+    height: 29vh;
+    margin-left: 48%;
+    margin-top: 175px;
+}
+
+.persojett {
+    position: relative;
+    z-index: 3;
+    width: 80%;
+    height: 60vh;
+}
+
+.jett {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    margin-top: 49px;
+    margin-left: 64%;
+    font-size: 60px;
+    font-family: 'Valorant';
+    color: white;
+}
+
+.habilidade1 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 157px;
+    margin-top: 8px;
+}
+
+.nome {
+    position: absolute;
+    width: 48%;
+    letter-spacing: 1px;
+    line-height: 33px;
+    font-weight: 500;
+    height: 6vh;
+    font-size: 21px;
+    z-index: 3;
+    margin-top: 16px;
+    margin-left: 38%;
+    color: white;
+    font-family: 'RopaSans';
+}
+
+
+.contexto {
+    position: absolute;
+    width: 44%;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-weight: 500;
+    height: 6vh;
+    font-size: 17px;
+    z-index: 3;
+    margin-top: 48px;
+    margin-left: 38%;
+    color: white;
+    font-family: 'RopaSans';
+    display: none; 
+}
+.img-updraft {
+    position: relative;
+    z-index: 3;
+    width: 7%;
+    height: 8vh;
+    margin-left: 36%;
+    margin-top: 11px;
+}
+
+.img-updraft:hover + .contexto{
+    display: block;
+}
+
+
+
+
+.habilidade2 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 157px;
+    margin-top: 59px;
+}
+
+
+.nome2jett{
+    position: absolute;
+    width: 48%;
+    letter-spacing: 1px;
+    line-height: 33px;
+    font-weight: 500;
+    height: 6vh;
+    font-size: 21px;
+    z-index: 3;
+    margin-top: 16px;
+    margin-left: 38%;
+    color: white;
+    font-family: 'RopaSans';
+}
+
+.contexto2jett{
+    position: absolute;
+    width: 39%;
+    letter-spacing: 1px;
+    line-height: 20px;
+    height: 6vh;
+    font-size: 17px;
+    z-index: 3;
+    margin-top: 48px;
+    margin-left: 38%;
+    color: white;
+    font-family: 'RopaSans';
+    display: none;
+}
+
+.img-updraft2{
+    position: relative;
+    z-index: 3;
+    width: 7%;
+    height: 8vh;
+    margin-left: 36%;
+    margin-top: 11px;
+}
+
+.img-updraft2:hover + .contexto2jett{
+    display: block;
+}
+
+.habilidade3 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 157px;
+    margin-top: 65px;
+}
+
+.nome3jett {
+    position: absolute;
+    width: 48%;
+    letter-spacing: 1px;
+    line-height: 33px;
+    font-weight: 500;
+    height: 6vh;
+    font-size: 21px;
+    z-index: 3;
+    margin-top: 16px;
+    margin-left: 38%;
+    color: white;
+    font-family: 'RopaSans';
+}
+
+.contexto3jett {
+    position: absolute;
+    width: 39%;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-weight: 500;
+    height: 6vh;
+    font-size: 17px;
+    z-index: 3;
+    margin-top: 48px;
+    margin-left: 38%;
+    color: white;
+    font-family: 'RopaSans';
+    display: none;
+    
+}
+
+.img-updraft3{
+    position: relative;
+    z-index: 3;
+    width: 7%;
+    height: 8vh;
+    margin-left: 36%;
+    margin-top: 11px;
+}
+
+.img-updraft3:hover + .contexto3jett{
+    transition: 8s ease-in;
+    display: block;
+}
+
+
+.habilidade4{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 157px;
+    margin-top: 88px;
+}
+
+
+.nome4jett{
+    position: absolute;
+    width: 39%;
+    letter-spacing: 1px;
+    line-height: 33px;
+    font-weight: 500;
+    height: 6vh;
+    font-size: 21px;
+    z-index: 3;
+    margin-top: 16px;
+    margin-left: 38%;
+    color: white;
+    font-family: 'RopaSans';
+}
+
+.contexto4jett{
+    position: absolute;
+    width: 38%;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-weight: 500;
+    height: 6vh;
+    font-size: 17px;
+    z-index: 3;
+    margin-top: 48px;
+    margin-left: 38%;
+    color: white;
+    font-family: 'RopaSans';
+    display: none;
+  
+}
+
+
+.img-updraft4{
+    position: relative;
+    z-index: 3;
+    width: 7%;
+    height: 8vh;
+    margin-left: 36%;
+    margin-top: 11px;
+}
+
+.img-updraft4:hover + .contexto4jett{
+    display: block;
+}
+
+
+.main2 {
+    width: 100%;
+    height: 20vh;
+    background: rgb(70,140,140);
+    background: linear-gradient(180deg, rgba(70,140,140,1) 4%, rgba(56,110,119,1) 16%, rgba(42,79,98,1) 37%, rgba(39,73,94,1) 46%, rgba(34,63,87,1) 63%, rgba(24,41,71,1) 83%);
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,80 @@
+
+@font-face {
+    font-family: RopaSans;
+    src: url(/fonts/RopaSans-Regular.ttf)
+}
+
+footer .footer {
+    font-family: 'RopaSans'
+}
+
+.quebra-cor{
+    background-color: #292929;
+    width: 100%;
+    height: 11vh;
+}
+
+
+.container-footer{
+    background-color: #111;
+    height: 35vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+
+.footer-esquerda-logo img{  
+
+
+    width: 20vw;
+    height: 24vh;
+    display: flex;
+    align-items: center;
+}
+
+.footer-esquerda-logo{
+    padding-left: 50px;
+}
+
+
+.footer-meio{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-family: 'RopaSans';
+}
+
+.footer-hover{
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    transition: .7s ease-in ;
+    font-family: 'RopaSans';
+
+}
+
+.footer-hover:hover{
+    color: white;
+    border-radius: 7px;
+    background-color:#f84454 ;
+    transition: .7s ease-in ;
+}
+
+.footer-direita{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    padding: 50px;
+    padding-right: 30px;
+    font-size: 25px;
+    color: white;
+}
+
+.footer-direita li{
+    list-style: none;
+}

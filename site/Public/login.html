@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="./js/funcoes.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav-container">
+
+            <img class="logo-img" src="img/img-logo.png" alt="">
+
+            <ul class="nav-list">
+
+                <li>
+                    <a href="index.html">Inicio
+                        <div class="barra"></div>
+                    </a>
+                </li>
+
+
+                <!-- <li>
+                    <a href="#">Ranking</a>
+                    <div class="barra"></div>
+                </li> -->
+
+
+                <li>
+                    <a href="index.html#classesPersonagens">Classes
+                        <a style="color: white;">
+                            |
+                        </a>
+                        <a href="index.html#classesPersonagens">Personagens
+                            <div class="barra"></div>
+                        </a>
+                        <div class="barra"></div>
+                    </a>
+
+
+                </li>
+
+
+                <li>
+                    <a href="index.html#interagir">Interagir
+                        <div class="barra"></div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#sobremim">Sobre mim
+                        <div class="barra"></div>
+                    </a>
+                </li>
+
+                <li style="color: white;">
+                    |
+                </li>
+
+                <li>
+                    <a href="login.html">Login
+                        <div class="barra"></div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cadastro.html">Cadastre-se
+                        <div class="barra"></div>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+
+        <main class="login">
+            <div class="div-img-login">
+                <img class="img-login" src="img/img-site/img-login.png" alt="">
+
+
+
+                <div class="container-login">
+                    <img class="logo-login" src="img/img-site/logo-vermelha-login.png" alt="">
+
+                    <h1 class="titulo-login">Iniciar Sesão</h1>
+
+
+                    <div class="div-ipts">
+                        <span class="email">Email:</span>
+                        <input class="ipt-email" type="text" placeholder="email@email.com" id="email_input">
+
+                        <span class="senha">Senha:</span>
+                        <input class="ipt-senha" type="password" placeholder="******" id="senha_input">
+                    </div>
+
+                    <a onclick="entrar()" class="btn-entrar">Entrar</a>
+                </div>
+
+            </div>
+
+
+
+
+        </main>
+
+
+    </header>
+
+</body>
+
+</html>
+<script>
+
+    
+function entrar() {
+        // aguardar();
+
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            // cardErro.style.display = "block"
+            // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            finalizarAguardar();
+            return false;
+        }
+        // else {
+        //     setInterval(sumirMensagem, 5000)
+        // }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "./SegundaTela/ranking.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    // function sumirMensagem() {
+    //     cardErro.style.display = "none"
+    // }
+
+
+</script>
